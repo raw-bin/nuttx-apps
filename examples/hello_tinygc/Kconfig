@@ -1,0 +1,26 @@
+config EXAMPLES_HELLO_TINYGC
+	tristate "\"Hello, tinygc!\" example (tinygc)"
+	select ARCH_SETJMP_H
+	select GCS_TINYGC
+	default n
+	---help---
+		Enable the \"Hello, tinygc!\" example
+
+if EXAMPLES_HELLO_TINYGC
+
+config EXAMPLES_HELLO_TINYGC_PROGNAME
+	string "Program name"
+	default "hello_tinygc"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_HELLO_TINYGC_PRIORITY
+	int "Hello task priority"
+	default 100
+
+config EXAMPLES_HELLO_TINYGC_STACKSIZE
+	int "tinygc Hello stack size"
+	default DEFAULT_TASK_STACKSIZE
+
+endif

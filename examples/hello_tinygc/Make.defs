@@ -1,0 +1,3 @@
+ifneq ($(CONFIG_EXAMPLES_HELLO_TINYGC),)
+CONFIGURED_APPS += $(APPDIR)/examples/hello_tinygc
+endif
