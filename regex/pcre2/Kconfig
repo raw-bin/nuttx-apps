@@ -1,0 +1,4 @@
+config REGEX_PCRE2
+  tristate "Support for PCRE2 Perl Compatible Regular Expressions"
+  default n
+  depends on ALLOW_BSD_COMPONENTS

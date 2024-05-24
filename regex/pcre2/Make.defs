@@ -1,0 +1,7 @@
+ifneq ($(CONFIG_REGEX_PCRE2),)
+  CFLAGS += ${INCDIR_PREFIX}$(APPDIR)/regex/pcre2/unpack/install/include
+  EXTRA_LIBPATHS += -L$(APPDIR)/regex/pcre2/unpack/install/lib
+  EXTRA_LIBS += -lpcre2-posix
+  EXTRA_LIBS += -lpcre2-8
+  CONFIGURED_APPS += $(APPDIR)/regex/pcre2
+endif

@@ -1,0 +1,26 @@
+config EXAMPLES_HELLO_PCRE2
+	tristate "\"Hello, pcre2!\" example (pcre2)"
+	select ARCH_SETJMP_H
+	select REGEX_PCRE2
+	default n
+	---help---
+		Enable the \"Hello, pcre2!\" example
+
+if EXAMPLES_HELLO_PCRE2
+
+config EXAMPLES_HELLO_PCRE2_PROGNAME
+	string "Program name"
+	default "hello_pcre2"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_HELLO_PCRE2_PRIORITY
+	int "Hello task priority"
+	default 100
+
+config EXAMPLES_HELLO_PCRE2_STACKSIZE
+	int "pcre2 Hello stack size"
+	default DEFAULT_TASK_STACKSIZE
+
+endif
