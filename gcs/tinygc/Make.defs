@@ -1,0 +1,4 @@
+ifneq ($(CONFIG_GCS_TINYGC),)
+  CFLAGS += ${INCDIR_PREFIX}$(APPDIR)/gcs/tinygc/tinygc
+  CONFIGURED_APPS += $(APPDIR)/gcs/tinygc
+endif

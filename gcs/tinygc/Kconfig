@@ -1,0 +1,4 @@
+config GCS_TINYGC
+  tristate "Support for the tinygc garbage collector"
+  default n
+  depends on ALLOW_GPL_COMPONENTS
